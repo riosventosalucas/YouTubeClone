@@ -1,0 +1,26 @@
+upstream django_app {
+    server django:8000;
+}
+
+server {
+      listen 80;
+      access_log off;
+      error_log off;
+      return 301 https://$server_name$request_uri;
+}
+
+
+server {
+    listen 443 ssl;
+    access_log /var/log/nginx/app.log;
+    error_log /var/log/nginx/app.error.log;
+    server_name localhost;
+
+    ssl_certificate /etc/nginx/certs/platzitest.dev.crt;
+    ssl_certificate_key /etc/nginx/certs/platzitest.dev.key;
+
+    location / {
+	proxy_pass http://django:8000;
+    }
+
+}

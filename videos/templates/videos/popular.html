@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block container %}
+    
+
+    <div class="row mt-5">
+        <div class="col col-sm-8 offset-sm-2">
+            <h1 class="text-center">Video Popular List</h1>
+            {% for video in object_list %}
+                <div class="card w-100 mt-4">
+                    <div class="card-body">
+                    <h5 class="card-title"><label class="text-primary">#{{ forloop.counter }}</label> | {{video.title}}</h5>
+                    <img src="{{video.thumbnail_url}}" class="img-thumbnail" alt="{{video.slug}}-thumbnail">
+                    <h6>Popularity: {{video.calculate_popularity}} | <small>{{video.created_at}}</small></h6>
+                    <p class="card-text">By: {{video.author}}</p>
+                    <a href="/videos/{{video.slug}}/" class="btn btn-primary">Ver</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+{% endblock container %}
