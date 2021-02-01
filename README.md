@@ -1,3 +1,6 @@
+# Important!
+I had to generate a new SSL certificate because the one that was there did not allow me to open the site or with chrome, firefox and others that I tested. It is issued for a own domain , which is: guiait.com.ar
+
 Hi !
 
 This test has been designed to prove your knowledge of Python, Django, and Docker.
