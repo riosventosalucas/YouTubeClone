@@ -1,5 +1,5 @@
 # Important!
-I had to generate a new SSL certificate because the one that was in certs folder did not allow me to open the site with chrome, firefox and others that I tested. It is issued for a own domain , which is: guiait.com.ar
+I generated a new SSL certificate, because the previous one didn't allow me to open the webapp. I tried it with chrome, firefox, etc. It is issued for my own domain , which is: guiait.com.ar
 
 Hi !
 
